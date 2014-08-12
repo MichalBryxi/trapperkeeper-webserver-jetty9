@@ -299,7 +299,7 @@
               context-path (.getPathInfo req)
               uri (StringBuilder. (str scheme "://" (:host target)
                                        ":" (:port target)
-                                       "/" (:path target) context-path))]
+                                       (:path target) context-path))]
           (when query
             (.append uri "?")
             (.append uri query))
